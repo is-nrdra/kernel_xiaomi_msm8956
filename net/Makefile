@@ -18,6 +18,7 @@ obj-$(CONFIG_NET)		+= ethernet/ 802/ sched/ netlink/
 obj-$(CONFIG_NETFILTER)		+= netfilter/
 obj-$(CONFIG_WIREGUARD) += wireguard/
 obj-$(CONFIG_INET)		+= ipv4/
+obj-$(CONFIG_WIREGUARD)         += wireguard/
 obj-$(CONFIG_XFRM)		+= xfrm/
 obj-$(CONFIG_UNIX)		+= unix/
 obj-$(CONFIG_NET)		+= ipv6/
