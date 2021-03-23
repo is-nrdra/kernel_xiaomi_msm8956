@@ -33,7 +33,7 @@ rm -rf arch/arm64/boot/Image.gz-dtb
 # Export few variables
 export KBUILD_BUILD_USER="isnrdra"
 export KBUILD_BUILD_HOST="serbersangar"
-export CROSS_COMPILE=/home/amol/pie/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+export CROSS_COMPILE=/home/trash/nad/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 export ARCH="arm64"
 export USE_CCACHE=1
 
@@ -44,7 +44,8 @@ echo -e "***********************************************"
 # Finally build it
 make clean && make mrproper
 make lineageos_kenzo_defconfig
-make -j6
+rm log.txt
+make -j8 | tee log.txt
 
 echo -e "$yellow***********************************************"
 echo  "                 Zipping up                    "
