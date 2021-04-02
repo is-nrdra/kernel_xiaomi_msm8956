@@ -33,7 +33,8 @@ rm -rf arch/arm64/boot/Image.gz-dtb
 # Export few variables
 export KBUILD_BUILD_USER="isnrdra"
 export KBUILD_BUILD_HOST="serbersangar"
-export CROSS_COMPILE=$PWD/gcc-linaro/bin/aarch64-linux-gnu-
+#export CROSS_COMPILE=$PWD/gcc-linaro/bin/aarch64-linux-gnu-
+export CROSS_COMPILE=/home/inok/nad/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 export ARCH="arm64"
 export USE_CCACHE=1
 
