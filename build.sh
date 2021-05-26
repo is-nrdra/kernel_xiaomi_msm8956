@@ -16,7 +16,7 @@ KERNEL_DIR=$PWD
 Anykernel_DIR=$KERNEL_DIR/AnyKernel3/
 DATE=$(date +"%d%m%Y")
 TIME=$(date +"-%H.%M.%S")
-KERNEL_NAME="LontongSayur"
+KERNEL_NAME="LontongSayurX"
 DEVICE="-kenzo-"
 FINAL_ZIP="$KERNEL_NAME""$DEVICE""$DATE""$TIME"
 
@@ -56,6 +56,7 @@ echo -e "***********************************************"
 cp arch/arm64/boot/Image.gz-dtb $Anykernel_DIR
 cd $Anykernel_DIR
 zip -r9 $FINAL_ZIP.zip * -x .git README.md *placeholder
+mv $FINAL_ZIP.zip ../Zip/
 
 echo -e "$cyan***********************************************"
 echo  "            Cleaning up the mess created               "
